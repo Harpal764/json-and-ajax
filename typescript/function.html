@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="cc"></h2>
+    <button id="btn">Increment Count</button>
+   
+    <script src="src/script1.js"></script>
+
+    <script>
+
+       // console.log(count)
+       /*
+var btn=document.getElementById("btn");
+btn.addEventListener("click", function(){
+    var r=IncrementCount();
+    count=0;
+    document.getElementById("cc").innerHTML=r;
+})
+*/
+
+
+
+
+/*       
+        let Addition=function (n1,n2,...arr){
+            let r=n1+n2;
+           // console.log(arguments)
+            arr.forEach(e=>r+=e)
+            return r
+        }
+
+        console.log(Addition(2,5,6,9,44,55,88,99)) */
+
+/*
+let calc={};
+
+calc.addition=function(x,y){return x+y;}
+calc.substraction=function(x,y){return x-y;}
+calc.division=function(x,y){return x/y;}
+calc.muliplication=function(x,y){return x*y;}
+
+console.log(calc.muliplication(22,5))
+*/
+/*
+let test=(function(){
+
+        console.log("i am invoked !")
+        return function(){ return function(){alert("hello")}}
+})()
+
+
+let f=test()
+f()
+
+*/
+
+
+
+//callback
+
+function Product(x,y, callback){
+    console.log("code started")
+    var r;
+    setTimeout(function(){
+     r=x*y;
+     console.log("code executing")
+
+    callback(r)
+    },0)
+    console.log("code ended")
+}
+
+Product(33,44,(r)=>{
+    console.log(r)
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

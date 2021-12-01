@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .circle{
+         height: 200px;
+         width: 200px;
+         border-radius: 50%;
+         background-color: red;
+     }
+
+     .border{
+         border:5px solid green;
+     }
+     .pink-border{
+         border:10px solid pink;
+     }
+    </style>
+</head>
+<body>
+  <button id="btn">Click me</button>
+  <div id="BOX" >
+     <select name="" id="ddl">
+         <option value="">Select Website</option>
+         <option value="https://www.google.com" >Google</option>
+         <option value="https://www.facebook.com">Facebook</option>
+         <option value="https://www.yahoo.com">Yahoo</option>
+
+     </select>
+
+     <a href="#" id="link">No Link Till Now</a>
+  </div>
+    
+<script>
+
+var btn=document.querySelector("#btn");
+
+function Test(){
+
+    var box=document.querySelector("#BOX");
+    
+    /*
+    var ele=document.createElement("div");
+    ele.classList.add("circle")
+    box.appendChild(ele)
+    */
+
+       // box.remove()
+     //  box.removeChild(box.children[0])
+    // console.log(box.children)
+
+    /*
+    var p=document.createElement("p");
+    var txt=document.createTextNode("i am new data");
+    p.appendChild(txt);
+    box.appendChild(p)
+*/
+
+//box.style.border="5px solid blue"
+//box.className=box.className+" border"
+//box.classList.remove("pink-border")
+//box.classList.add("border")
+//box.classList.replace("pink-border","border")
+//console.log( box.className)
+
+
+
+
+}
+
+btn.addEventListener("click",Test);
+
+document.getElementById("ddl").addEventListener("change",function(e){
+ 
+   // console.log(this.value)
+    var txt=this.options[this.options.selectedIndex].innerText
+    var link=document.querySelector("#link");
+    link.setAttribute("href",this.value)
+    link.innerText=txt
+})
+
+   
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
